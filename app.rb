@@ -32,7 +32,8 @@ end
 
 post '/login' do
   session[:username]= params[:username]
-  erb :login
+  # erb :login
+  redirect "/member"
 end
 
 
@@ -42,4 +43,13 @@ get '/logout' do
   erb :logout
 end  
 
+
+get "/member" do
+  if session[:username]
+    erb :member
+  else
+  redirect "/login"
+end
+  
+end  
 

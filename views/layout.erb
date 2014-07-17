@@ -3,7 +3,15 @@
 </head>	
 <body>
 	
-	<a href='/'> home </a> &nbsp; <a href='/login'> login </a> &nbsp; <a href='/logout'> logout </a> <br/>
+	<a href='/'> home </a> &nbsp;  
+	<% if session[:username]%>
+	<a href='/member'> member </a> &nbsp; 
+	
+	<a href='/logout'> logout </a>
+	<% else %>
+	<a href='/login'> login </a> &nbsp;
+	<%end %>
+	 &nbsp; <a href='/erb_example'> ERB Example </a> <br/> 
 	
 	<%=session[:username]%><br/>
 	
