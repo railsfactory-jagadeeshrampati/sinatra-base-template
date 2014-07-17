@@ -2,6 +2,11 @@
 <head>
 </head>	
 <body>
+	
+	<a href='/'> home </a> &nbsp; <a href='/login'> login </a> &nbsp; <a href='/logout'> logout </a> <br/>
+	
+	<%=session[:username]%><br/>
+	
 <%=yield %>
 </body>
 </html>
