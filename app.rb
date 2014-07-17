@@ -15,3 +15,10 @@ get '/' do
   @time =  Time.now
   erb :index
 end  
+
+
+
+get '/erb_example' do
+  @names = ["Pavani","Usha","Surekha","Sujitha","Manjusagar","Veeresh","Deepanker","Pavankumar","Jagadeesh"].shuffle
+  erb :example
+end  
