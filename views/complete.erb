@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>TODO LIST WEB PAGE</title>
+<h1> COMPLETE TASK <h1>
+</head>
+<body>
+<form action = "/complete" method = "post">
+   <input type = text name = "num1">
+   <input type=submit name = "comp1" value = "COMPLETE TASK">   
+</form>
+<ol>
+<% @items.each do |item| %>
+
+<li><%=item %> </li>
+
+<% end %>
+</ol>
+</body>
+</html>

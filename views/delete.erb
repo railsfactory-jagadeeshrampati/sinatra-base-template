@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>TODO LIST WEB PAGE</title>
+<h1> DELETE TASK <h1>
+</head>
+<body>
+<form action = "/delete" method = "post">
+   <input type = text name = "num2">
+   <input type=submit name = "del1" value = "DELETE TASK">   
+</form>
+<ol>
+<% @items.each do |item| %>
+
+<li><%=item %> </li>
+
+<% end %>
+</ol>
+</body>
+</html>
