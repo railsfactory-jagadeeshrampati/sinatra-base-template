@@ -4,8 +4,8 @@ require 'bundler/setup'
 require 'sinatra'
 require './todo.rb'
 
-t =Todolist.new("rj.txt")
 con = Mysql2::Client.new(:host => "localhost", :username => "root", :password => 'root', :database => "todo")
+
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
 end
